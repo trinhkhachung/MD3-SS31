@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function check(str) {
+            str = str.split(" ");
+            let max = 0;
+            let result = [];
+            for (let i = 0; i < str.length; i++) {
+
+                if (max < str[i].length) {
+                    max = str[i].length;
+                    result.push([str[i], max]);
+                }
+            }
+            return result[result.length - 1]
+        }
+        let str = ("The quick brown fox jumped over the lazy dog");
+        console.log(check(str));
+    </script>
+</body>
+
+</html>
